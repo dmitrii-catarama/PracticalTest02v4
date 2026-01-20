@@ -1,19 +1,131 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/main"
+    android:orientation="vertical"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".PracticalTest02MainActivityv4">
+    <Space
+        android:layout_width="match_parent"
+        android:layout_height="20dp"/>
 
     <TextView
-        android:layout_width="wrap_content"
+        android:id="@+id/server_text_view"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Hello World!"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        android:gravity="center"
+        android:text="SERVER"
+        android:textStyle="bold"
+        android:textSize="25sp"/>
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+    <Space
+        android:layout_width="match_parent"
+        android:layout_height="10dp"/>
+
+    <GridLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:columnCount="2"
+        android:rowCount="1">
+
+        <EditText
+            android:id="@+id/server_port_edit_text"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_column="0"
+            android:layout_row="0"
+            android:layout_columnWeight="1"
+            android:hint="Port" />
+
+        <Button
+            android:id="@+id/connect_button"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_row="0"
+            android:layout_column="1"
+            android:layout_columnWeight="1"
+            android:text="CONNECT"
+            android:backgroundTint="@android:color/holo_blue_light"
+            android:textColor="@android:color/white"
+            android:padding="8dp">
+
+        </Button>
+
+    </GridLayout>
+    <Space
+        android:layout_width="match_parent"
+        android:layout_height="20dp"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="CLIENT"
+        android:textStyle="bold"
+        android:textSize="25sp"/>
+
+    <Space
+        android:layout_width="match_parent"
+        android:layout_height="10dp"/>
+
+    <GridLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:columnCount="2"
+        android:rowCount="3">
+
+        <EditText
+            android:id="@+id/client_address_edit_text"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_column="0"
+            android:layout_row="0"
+            android:layout_columnWeight="1"
+            android:hint="Address" />
+
+        <EditText
+            android:id="@+id/client_port_edit_text"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_row="0"
+            android:layout_column="1"
+            android:layout_columnWeight="1"
+            android:hint="Port">
+
+        </EditText>
+
+        <EditText
+            android:id="@+id/client_word_edit_text"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_column="0"
+            android:layout_row="1"
+            android:layout_columnWeight="1"
+            android:hint="URL cautat" />
+
+        <!--        <Button-->
+        <!--            android:id="@+id/get_anagrams_button"-->
+        <!--            android:layout_width="0dp"-->
+        <!--            android:layout_height="wrap_content"-->
+        <!--            android:layout_row="1"-->
+        <!--            android:layout_column="1"-->
+        <!--            android:layout_columnWeight="2"-->
+        <!--            android:text="GET ANAGRAMS"-->
+        <!--            android:backgroundTint="@android:color/holo_blue_light"-->
+        <!--            android:textColor="@android:color/white"-->
+        <!--            android:padding="8dp">-->
+        <!--        </Button>-->
+
+    </GridLayout>
+
+    <TextView
+        android:id="@+id/autocomplete_text_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+    </TextView>
+
+
+</LinearLayout>
